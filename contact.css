@@ -1,0 +1,146 @@
+:root {
+  --ground: #edf0f5;
+  --ink: #141a2e;
+  --muted: #565e76;
+  --rule: #d3d8e2;
+  --signal: #102a43;
+  --orange: #f58025;
+  --orange-ink: #b74a00;
+  --wrap: 1000px;
+  font-family: Archivo, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--ground);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  line-height: 1.55;
+}
+.wrap {
+  max-width: var(--wrap);
+  margin: auto;
+  padding: 0 24px;
+}
+.topbar {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.topbar .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 0.88rem;
+}
+.brand {
+  color: var(--ink);
+  font-weight: 750;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+}
+.topbar a,
+a {
+  color: inherit;
+  text-underline-offset: 3px;
+}
+.brand:hover {
+  color: var(--signal);
+}
+.topbar nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.topbar nav a {
+  padding: 5px 0;
+  border-bottom: 2px solid transparent;
+  text-decoration: none;
+}
+.topbar nav a:hover {
+  color: var(--signal);
+}
+.topbar nav a[aria-current="page"] {
+  color: var(--ink);
+  border-bottom-color: var(--signal);
+}
+.display {
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 0.98;
+}
+.hero {
+  padding: 74px 0 36px;
+}
+.hero h1 {
+  font-size: clamp(3.5rem, 9vw, 7rem);
+  margin: 0;
+}
+.hero p {
+  max-width: 42ch;
+  font-size: 1.2rem;
+  color: var(--muted);
+}
+.contact-list {
+  display: grid;
+  gap: 0;
+  max-width: 720px;
+  border-top: 2px solid var(--ink);
+}
+.contact-list a,
+.contact-list div {
+  padding: 22px 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: clamp(1.1rem, 1rem + 0.5vw, 1.45rem);
+  font-weight: 600;
+  text-decoration: none;
+}
+.contact-list span {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--orange-ink);
+  font-weight: 500;
+  text-decoration: none;
+}
+.contact-list b {
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+.site-footer {
+  margin-top: 88px;
+  padding: 22px 0 42px;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+.site-footer .wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.site-footer a {
+  text-decoration: none;
+}
+.site-footer a:hover {
+  color: var(--signal);
+  text-decoration: underline;
+}
+@media (max-width: 480px) {
+  .wrap {
+    padding: 0 16px;
+  }
+  .topbar nav {
+    gap: 14px;
+  }
+  .hero {
+    padding-top: 52px;
+  }
+}

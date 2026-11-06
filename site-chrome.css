@@ -1,0 +1,122 @@
+/* Shared site navigation: loaded after each page's local styles. */
+html {
+  scrollbar-gutter: stable;
+}
+body {
+  margin: 0;
+}
+
+.site-topbar {
+  height: 62px;
+  padding: 0 !important;
+  border-bottom: 1px solid var(--rule) !important;
+}
+
+.site-topbar .wrap {
+  max-width: 1120px;
+  width: 100%;
+  min-height: 61px;
+  padding-left: max(24px, env(safe-area-inset-left, 0px));
+  padding-right: max(24px, env(safe-area-inset-right, 0px));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 0.9rem !important;
+}
+
+.site-topbar .brand {
+  color: var(--ink);
+  font-weight: 750;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+}
+
+.site-topbar .brand:hover {
+  color: var(--orange-ink);
+}
+
+.site-topbar nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+  height: 61px;
+}
+
+.site-topbar nav a {
+  display: inline-flex;
+  align-items: center;
+  height: 61px;
+  padding: 0;
+  border-bottom: 2px solid transparent;
+  color: var(--muted);
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.site-topbar nav a:hover {
+  color: var(--orange-ink);
+}
+.site-topbar nav a[aria-current="page"] {
+  color: var(--ink);
+  border-bottom-color: var(--orange);
+}
+
+/* Contact values stay clean; external profile destinations remain visibly linked. */
+.contact-list b {
+  text-decoration: none !important;
+}
+.contact-list a[href*="linkedin"] b,
+.contact-list a[href*="github"] b {
+  text-decoration: underline !important;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.page-title {
+  margin: 0;
+  font-size: clamp(3.1rem, 7vw, 5.7rem) !important;
+  font-family: Archivo, Arial, sans-serif !important;
+  font-variation-settings: "wdth" 125 !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.035em !important;
+  line-height: 0.98 !important;
+}
+
+.page-hero {
+  padding: clamp(52px, 7vw, 80px) 0 28px !important;
+}
+
+.site-page-width {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-left: max(24px, env(safe-area-inset-left, 0px));
+  padding-right: max(24px, env(safe-area-inset-right, 0px));
+}
+
+@media (max-width: 480px) {
+  .site-topbar {
+    height: auto;
+  }
+  .site-topbar .wrap {
+    min-height: 61px;
+    gap: 14px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+  .site-topbar nav {
+    height: auto;
+    gap: 16px;
+  }
+  .site-topbar nav a {
+    height: 40px;
+  }
+  .site-page-width {
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+}

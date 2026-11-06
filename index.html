@@ -1,0 +1,798 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="claude:viewport-fit-sides" content="cover" />
+    <title>Ryan Dalal</title>
+    <meta
+      name="description"
+      content="Ryan Dalal is a Princeton software engineer focused on AI/ML systems, data pipelines, modeling, and developer infrastructure."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="site-chrome.css" />
+  </head>
+  <body>
+    <header class="topbar site-topbar">
+      <div class="wrap">
+        <a class="brand" href="index.html">Ryan Dalal</a>
+        <nav aria-label="Primary navigation">
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="hero page-hero">
+        <div class="site-page-width">
+          <h1 class="display page-title">Ryan Dalal</h1>
+          <p class="lede">
+            Electrical and Computer Engineering student at Princeton building
+            production-minded software. Experience building full-stack iOS apps,
+            analyzing AI agent behavior, and developing embedded systems from
+            firmware to hardware.
+          </p>
+          <div class="links">
+            <a
+              class="btn primary"
+              href="https://github.com/ryanadalal"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg viewBox="0 0 16 16" aria-hidden="true" fill="currentColor">
+                <path
+                  d="M8 0a8 8 0 0 0-2.53 15.59c.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.07-2.7-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.05-.49.05-.49.81.06 1.23.83 1.23.83.72 1.23 1.88.87 2.34.67.07-.52.28-.88.51-1.08-1.78-.2-3.65-.89-3.65-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.66 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8 8 0 0 0 8 0Z"
+                />
+              </svg>
+              GitHub
+            </a>
+            <a
+              class="btn"
+              href="https://linkedin.com/in/ryanadalal"
+              target="_blank"
+              rel="noopener"
+              >LinkedIn</a
+            >
+            <a class="btn" href="contact.html">Email</a>
+          </div>
+
+          <div class="profile-summary" aria-label="At a glance">
+            <div>
+              <strong>Currently</strong
+              ><span>Software Engineer, TigerApps &middot; Building Forum</span>
+            </div>
+            <div>
+              <strong>Education</strong
+              ><span>Princeton ECE &middot; BSE, Class of 2029</span>
+            </div>
+            <div>
+              <strong>Focus</strong
+              ><span
+                >Software engineering &middot; AI/ML systems &middot; Data &amp;
+                developer infrastructure</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section id="work">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 class="display">Selected work</h2>
+          </div>
+
+          <!-- TECO glasses -->
+          <article class="project" id="eog-glasses">
+            <div class="project-text">
+              <div class="meta">
+                <span class="where"
+                  >TECO Research Group, Karlsruhe Institute of Technology</span
+                ><span>Jun &ndash; Jul 2026</span>
+              </div>
+              <h3 class="display">OpenEarable EOG Glasses</h3>
+              <p class="summary">
+                Open-source eyeglasses for tracking eye movements via
+                electrooculography. Dry electrodes at natural skin-contact
+                points&mdash;the nose pads and nose bridge&mdash;pick up changes
+                in electric fields caused by eye movement, allowing for
+                directional classification.
+              </p>
+              <ul class="did">
+                <li>
+                  Developed open-source C device driver for bio-potential ADC
+                  from vendor spec, exposing a configurable 4-channel interface
+                  (gain, right-leg-drive) through an API with support for 6
+                  pins; integrated driver into the platform's sensor abstraction
+                  layer.
+                </li>
+                <li>
+                  Redesigned polling-based sensor driver from busy-waiting to
+                  interrupt-driven I/O on Zephyr RTOS, reducing CPU overhead and
+                  enabling dual-channel support across 7 configurable sample
+                  rates up to 500 Hz.
+                </li>
+                <li>
+                  Built Python script to process and filter EOG signal data
+                  streamed via Bluetooth Low Energy, enabling real-time
+                  visualization; validated the pipeline with a threshold-based
+                  gaze classifier, confirming consistent, low-noise tracking
+                  across test sessions.
+                </li>
+                <li>
+                  Designed PCB and 3D-printed chassis, shrunk legacy PCB
+                  footprint by 55%, integrated electrodes at natural skin
+                  contact points.
+                </li>
+              </ul>
+              <ul class="stack" aria-label="Tools">
+                <li>C</li>
+                <li>Zephyr RTOS</li>
+                <li>BLE</li>
+                <li>Python DSP</li>
+                <li>EasyEDA</li>
+                <li>Fusion 360</li>
+              </ul>
+              <div class="links">
+                <a
+                  class="btn"
+                  href="https://github.com/ryanadalal/TECO-Glasses"
+                  target="_blank"
+                  rel="noopener"
+                  >Source code &amp; project write-up</a
+                >
+              </div>
+            </div>
+            <figure>
+              <div class="plate">
+                <img
+                  src="img/openearable/glasses.png"
+                  alt="Rendered model of the EOG glasses frame with labels for the USB-C port, debugging connector, PCB housing, concealed nose bridge electrode, nose pad electrodes, and battery housing"
+                  width="960"
+                  height="540"
+                />
+              </div>
+              <p class="fig-cap">
+                Wearable prototype integrating the custom electronics, dry
+                electrodes, battery, and 3D-printed frame.
+              </p>
+              <div class="fig-row">
+                <div>
+                  <div class="plate">
+                    <img
+                      src="img/openearable/pcb.png"
+                      alt="Render of the AFE1594-based expansion PCB with electrode pads E1 to E4 and a dedicated right-leg-drive pin"
+                      width="960"
+                      height="540"
+                    />
+                  </div>
+                  <p class="fig-cap">
+                    Custom AFE1594 expansion board with four configurable
+                    sensing channels and a dedicated right-leg-drive pin.
+                  </p>
+                </div>
+                <div>
+                  <div class="plate">
+                    <img
+                      src="img/openearable/horizontal.png"
+                      alt="Recorded horizontal and vertical EOG channels in microvolts over 700 samples"
+                      width="1906"
+                      height="1067"
+                    />
+                  </div>
+                  <p class="fig-cap">
+                    Recorded horizontal and vertical EOG channels used to
+                    validate the Bluetooth signal pipeline.
+                  </p>
+                </div>
+              </div>
+            </figure>
+          </article>
+
+          <!-- Belief embeddings -->
+          <article class="project" id="belief-embeddings">
+            <div class="project-text">
+              <div class="meta">
+                <span class="where">Research project</span><span>Jan 2026</span>
+              </div>
+              <h3 class="display">Agent exploration via belief embeddings</h3>
+              <p class="summary">
+                An analysis of how agents choose what to explore next.
+              </p>
+              <ul class="did">
+                <li>
+                  Compared exploration strategies of Deep vs Standard Bayesian
+                  Optimal Experimental Design agents across 30 Supreme Court
+                  case classification tasks by analyzing belief embeddings,
+                  concept graphs, and step-wise reasoning traces.
+                </li>
+                <li>
+                  Decomposed DBOED&rsquo;s belief system into high-entropy
+                  exploratory and low-entropy task-focused components,
+                  validating the split with UMAP visualizations and statistical
+                  tests (p &lt; 0.001).
+                </li>
+                <li>
+                  Analyzed convergence of Euclidean distance; found agents
+                  reached stable beliefs 1.5-2x faster for correctly predicted
+                  cases.
+                </li>
+              </ul>
+              <ul class="stack" aria-label="Tools">
+                <li>Python</li>
+                <li>UMAP</li>
+                <li>NumPy</li>
+                <li>Pandas</li>
+                <li>Statistical testing</li>
+              </ul>
+              <div class="links">
+                <a
+                  class="btn"
+                  href="https://github.com/ryanadalal/RematchChallenge"
+                  target="_blank"
+                  rel="noopener"
+                  >Source code &amp; project write-up</a
+                >
+              </div>
+            </div>
+            <figure>
+              <div class="plate">
+                <img
+                  src="img/agent-analysis/belief_embedding_umap.png"
+                  alt="UMAP plots of agent belief embeddings by step number, agent type, and task versus design beliefs"
+                  width="974"
+                  height="301"
+                />
+              </div>
+              <p class="fig-cap">
+                UMAP projection of belief states, showing a separation between
+                task-focused and design-focused reasoning.
+              </p>
+              <div class="fig-row">
+                <div>
+                  <div class="plate">
+                    <img
+                      src="img/agent-analysis/belief_change_magnitude_by_accuracy.png"
+                      alt="Line charts comparing average belief-change distance through correct and incorrect agent episodes"
+                      width="974"
+                      height="362"
+                    />
+                  </div>
+                  <p class="fig-cap">
+                    Belief-change magnitude across correct and incorrect
+                    episodes, used to measure convergence.
+                  </p>
+                </div>
+                <div>
+                  <div class="plate">
+                    <img
+                      src="img/agent-analysis/concept_activation_clusters.png"
+                      alt="UMAP clusters showing BOED and DBOED concept activation through time"
+                      width="974"
+                      height="291"
+                    />
+                  </div>
+                  <p class="fig-cap">
+                    Concept-activation clusters over time, contrasting the
+                    exploration patterns of BOED and Deep BOED.
+                  </p>
+                </div>
+              </div>
+            </figure>
+          </article>
+
+          <!-- Accelerator -->
+          <article class="project" id="accelerator">
+            <div class="project-text">
+              <div class="meta">
+                <span class="where">Independent project</span
+                ><span>Aug 2026</span>
+              </div>
+              <h3 class="display">RISC-V matrix multiplication accelerator</h3>
+              <p class="summary">
+                Designed a RISC-V SoC in SystemVerilog integrating a 5-stage CPU
+                core with a 16&times;16 INT8 systolic array accelerator and
+                custom direct memory access engine to efficiently offload matrix
+                workloads.
+              </p>
+              <ul class="did">
+                <li>
+                  Built a C++/Verilator-based simulation and test framework with
+                  a Makefile-driven suite of 14 automated correctness tests,
+                  validating functional behavior against the Spike reference
+                  simulator.
+                </li>
+                <li>
+                  Verified RISC-V ISA compliance using RISC-V Architectural
+                  Compliance Tests (ACT) and CoreMark, achieving an 87.7x cycle
+                  speedup on 256-element matrix workloads over the baseline CPU.
+                </li>
+                <li>
+                  Synthesized SoC with Yosys to characterize FPGA resource
+                  tradeoffs: ~3x LUT/FF/DSP increase over the baseline CPU.
+                </li>
+              </ul>
+              <ul class="stack" aria-label="Tools">
+                <li>SystemVerilog</li>
+                <li>RISC-V</li>
+                <li>Verilator</li>
+                <li>C++</li>
+                <li>Spike</li>
+                <li>Yosys</li>
+              </ul>
+              <div class="links">
+                <a
+                  class="btn"
+                  href="https://github.com/ryanadalal/HardwareAccelerator"
+                  target="_blank"
+                  rel="noopener"
+                  >Explore source code</a
+                >
+              </div>
+            </div>
+            <figure>
+              <div class="accel-result">
+                <div class="big">87.7&times;</div>
+                <p class="big-label">
+                  fewer cycles than the baseline CPU on a 256-element matrix
+                  multiply
+                </p>
+              </div>
+              <div class="table-scroll">
+                <table class="synth">
+                  <caption class="fig-cap synth-caption">
+                    Yosys synthesis estimates for Xilinx 7-series, excluding
+                    block RAM.
+                  </caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Resource</th>
+                      <th scope="col">CPU only</th>
+                      <th scope="col">Full SoC</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>LUT6</td>
+                      <td>3,188</td>
+                      <td class="up">9,858</td>
+                    </tr>
+                    <tr>
+                      <td>Flip-flops</td>
+                      <td>2,863</td>
+                      <td class="up">8,165</td>
+                    </tr>
+                    <tr>
+                      <td>DSP48E1</td>
+                      <td>0</td>
+                      <td class="up">267</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </figure>
+          </article>
+
+          <!-- Tover -->
+          <article class="project" id="tover">
+            <div class="project-text">
+              <div class="meta">
+                <span class="where">iOS app</span
+                ><span>Jun &ndash; Aug 2026</span>
+              </div>
+              <h3 class="display">Tover</h3>
+              <p class="summary">
+                Shipped collaborative trip-planning app to iOS App Store, backed
+                by a relational Postgres schema (users, trips, events,
+                memberships) with many-to-many group participation and automatic
+                offline caching.
+              </p>
+              <ul class="did">
+                <li>
+                  Enforced per-trip access control with row-level security
+                  policies built on security-definer helpers that avoid policy
+                  recursion, and kept derived totals and ratings consistent with
+                  write-time triggers backed by full-recompute functions for
+                  drift repair.
+                </li>
+                <li>
+                  Implemented greedy debt simplification to net split itemized
+                  expenses into per-member balances, settling debts with
+                  n&minus;1 transfers.
+                </li>
+                <li>
+                  Gated builds with a GitHub Actions CI pipeline running
+                  cost-splitting and date tests, linting, and type checks.
+                </li>
+              </ul>
+              <ul class="stack" aria-label="Tools">
+                <li>React Native (Expo)</li>
+                <li>TypeScript</li>
+                <li>Supabase</li>
+                <li>PostgreSQL</li>
+                <li>GitHub Actions</li>
+              </ul>
+              <div class="links">
+                <a
+                  class="btn"
+                  href="https://apps.apple.com/us/app/tover/id6770768778"
+                  target="_blank"
+                  rel="noopener"
+                  >Get it on the App Store</a
+                >
+                <span class="note">Source code is private.</span>
+              </div>
+            </div>
+            <figure>
+              <div class="app-gallery" aria-label="Tover app screenshots">
+                <figure>
+                  <img
+                    src="img/tover/IMG_4940.jpg"
+                    alt="Tover trip overview with itinerary, spending summary, and group balances"
+                  />
+                  <p class="fig-cap">
+                    Shared itinerary, trip budget, and balances at a glance.
+                  </p>
+                </figure>
+                <figure>
+                  <img
+                    src="img/tover/IMG_4941.jpg"
+                    alt="Tover map view showing saved places across Madrid"
+                  />
+                  <p class="fig-cap">
+                    Collaborative map for saving and locating trip plans.
+                  </p>
+                </figure>
+                <figure>
+                  <img
+                    src="img/tover/IMG_4943.jpg"
+                    alt="Tover trip details showing daily spending and budget categories"
+                  />
+                  <p class="fig-cap">
+                    Daily spending and category-level budget tracking.
+                  </p>
+                </figure>
+              </div>
+              <p class="fig-cap">
+                Tover&rsquo;s trip overview, shared map, and spending view
+                connect planning, group coordination, and settlement in one
+                flow.
+              </p>
+            </figure>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience" hidden>
+        <div class="wrap">
+          <div class="section-head">
+            <h2 class="display">Experience</h2>
+          </div>
+          <ul class="rows">
+            <li class="row">
+              <div class="when">Sep 2026 &ndash; present</div>
+              <div>
+                <h3>Software Engineer</h3>
+                <p class="org">TigerApps, Princeton University</p>
+                <p class="body">
+                  Builds Forum, a platform where Princeton users can organize
+                  events and connect around campus activities.
+                </p>
+              </div>
+            </li>
+            <li class="row">
+              <div class="when">Sep 2026 &ndash; present</div>
+              <div>
+                <h3>Undergraduate Course Assistant</h3>
+                <p class="org">
+                  Department of Mathematics, Princeton University
+                </p>
+                <p class="body">
+                  Selected by faculty recommendation to tutor Multivariable
+                  Calculus (MAT 201) at weekly study halls, in small groups and
+                  one-on-one. Topics include vector calculus, partial
+                  derivatives, and multiple integrals.
+                </p>
+              </div>
+            </li>
+            <li class="row">
+              <div class="when">Jun &ndash; Jul 2026</div>
+              <div>
+                <h3>Visiting Research Student</h3>
+                <p class="org">
+                  TECO Research Group, Karlsruhe Institute of Technology
+                </p>
+                <p class="body">
+                  Built the firmware, signal pipeline, PCB, and frame for the
+                  <a href="#eog-glasses">OpenEarable EOG glasses</a> on the
+                  OpenEarable 2.0 wearables platform.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="more">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 class="display">More projects</h2>
+            <p>Hackathons and earlier builds</p>
+          </div>
+          <ul class="more">
+            <li>
+              <h3>Contracts.XYZ</h3>
+              <p class="award">
+                Honorable Mention &middot; Princeton AI &times; Finance
+                Hackathon &middot; March 2026
+              </p>
+              <p>
+                A hedge-recommendation system customized to an investor&rsquo;s
+                trading positions, based on perpetuals contracts. It picked
+                yes/no contracts for hedging via a local LLM (Ollama) with a
+                rule-based fallback, backed by Monte Carlo backtests over 2,000+
+                price paths and served through an interactive Streamlit
+                dashboard.
+              </p>
+            </li>
+            <li>
+              <h3>Safe Pill Dispenser</h3>
+              <p>
+                A medication dispenser that unlocks by fingerprint on a
+                real-time-clock schedule, with missed-dose alerts and a Wi-Fi
+                web interface where caregivers can reload pills and override
+                safety features.
+              </p>
+              <span class="tag">C++, embedded</span>
+              <div class="links">
+                <a
+                  class="btn"
+                  href="https://github.com/ryanadalal/SafePillDispenser"
+                  target="_blank"
+                  rel="noopener"
+                  >Explore source code</a
+                >
+              </div>
+            </li>
+            <li>
+              <h3>ESP32 UART driver</h3>
+              <p>
+                A UART driver in pure C that writes the ESP32's UART and
+                GPIO-matrix registers directly, bypassing ESP-IDF. Enables
+                flexible cross-compatibility between any RX/TX pin pair and each
+                of the ESP32&rsquo;s three UART controllers.
+              </p>
+              <span class="tag">C, bare-metal registers</span>
+              <div class="links">
+                <a
+                  class="btn"
+                  href="https://github.com/ryanadalal/UARTDriver"
+                  target="_blank"
+                  rel="noopener"
+                  >Explore source code</a
+                >
+              </div>
+            </li>
+            <li>
+              <h3>WebUno</h3>
+              <p>
+                Online multiplayer Uno with Google sign-in, a ready-up lobby,
+                and saved game state, so players who disconnect rejoin where
+                they left off.
+              </p>
+              <span class="tag">Node.js, WebSockets, OAuth</span>
+              <div class="links">
+                <a
+                  class="btn"
+                  href="https://github.com/ryanadalal/WebUno"
+                  target="_blank"
+                  rel="noopener"
+                  >Explore source code</a
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="skills" hidden>
+        <div class="wrap two">
+          <div>
+            <div class="section-head"><h2 class="display">Skills</h2></div>
+            <dl class="skills">
+              <div>
+                <dt>Languages</dt>
+                <dd>
+                  C/C++, Python, SystemVerilog, Java, JavaScript/TypeScript, SQL
+                </dd>
+              </div>
+              <div>
+                <dt>Embedded &amp; hardware</dt>
+                <dd>
+                  Zephyr RTOS, Arduino, PlatformIO, J-Link, Vivado, Verilator,
+                  Yosys, EasyEDA, Fusion 360, Autodesk Inventor
+                </dd>
+              </div>
+              <div>
+                <dt>Software &amp; infrastructure</dt>
+                <dd>
+                  TypeScript, React Native, PostgreSQL, Supabase, REST APIs,
+                  Docker, Git, Linux, CI/CD, GitHub Actions
+                </dd>
+              </div>
+              <div>
+                <dt>Data &amp; ML</dt>
+                <dd>
+                  Python, PyTorch, NumPy, Pandas, Jupyter, UMAP, statistical
+                  testing, data pipelines
+                </dd>
+              </div>
+            </dl>
+          </div>
+          <div class="edu">
+            <div class="section-head"><h2 class="display">Education</h2></div>
+            <h3>Princeton University</h3>
+            <p class="degree">BSE, Electrical and Computer Engineering</p>
+            <div class="gpa">
+              <span>GPA <strong>4.00</strong></span
+              ><span>Expected June 2029</span>
+            </div>
+            <ul class="honors">
+              <li>
+                <b>Pyka Physics Prize</b
+                ><span
+                  >Awarded to undergraduates who show outstanding promise in
+                  physics</span
+                >
+              </li>
+              <li>
+                <b>Shapiro Prize for Academic Excellence</b
+                ><span
+                  >Awarded to outstanding first-year students for coursework and
+                  range and difficulty of study</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <footer id="contact" class="contact" hidden>
+        <div class="wrap">
+          <h2 class="display">Get in touch</h2>
+          <p>
+            Open to software engineering, AI/ML engineering, data engineering,
+            modeling, and developer infrastructure opportunities.
+          </p>
+          <div class="email-list">
+            <a class="email" href="mailto:ryan.dalal@princeton.edu"
+              >ryan.dalal@princeton.edu</a
+            >
+            <a class="email" href="mailto:ryanadalal@gmail.com"
+              >ryanadalal@gmail.com</a
+            >
+          </div>
+          <div class="links">
+            <a
+              class="btn"
+              href="https://linkedin.com/in/ryanadalal"
+              target="_blank"
+              rel="noopener"
+              >LinkedIn</a
+            >
+            <a
+              class="btn"
+              href="https://github.com/ryanadalal"
+              target="_blank"
+              rel="noopener"
+              >GitHub</a
+            >
+          </div>
+          <div class="fine">
+            <span>Ryan Dalal, New York</span><span>Updated November 2026</span>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <span
+          >Ryan Dalal &middot; Electrical and Computer Engineering, Princeton
+          University</span
+        ><span
+          ><a
+            href="https://github.com/ryanadalal"
+            target="_blank"
+            rel="noopener"
+            >GitHub</a
+          >
+          &middot;
+          <a
+            href="https://linkedin.com/in/ryanadalal"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          ></span
+        >
+      </div>
+    </footer>
+
+    <dialog
+      class="lightbox"
+      id="image-lightbox"
+      aria-labelledby="lightbox-caption"
+    >
+      <div class="lightbox-inner">
+        <button
+          class="lightbox-close"
+          type="button"
+          aria-label="Close enlarged image"
+        >
+          &times;
+        </button>
+        <img id="lightbox-image" src="" alt="" />
+        <p id="lightbox-caption"></p>
+      </div>
+    </dialog>
+
+    <script>
+      (function imageLightbox() {
+        const dialog = document.getElementById("image-lightbox");
+        const full = document.getElementById("lightbox-image");
+        const caption = document.getElementById("lightbox-caption");
+        const close = dialog.querySelector(".lightbox-close");
+        let trigger = null;
+
+        function captionFor(image) {
+          const plateCaption = image.closest(".plate")?.nextElementSibling;
+          if (plateCaption?.classList.contains("fig-cap"))
+            return plateCaption.textContent.trim();
+          const directCaption = image.nextElementSibling;
+          if (directCaption?.classList.contains("fig-cap"))
+            return directCaption.textContent.trim();
+          return image.alt;
+        }
+
+        function open(image) {
+          trigger = image;
+          full.src = image.currentSrc || image.src;
+          full.alt = image.alt;
+          caption.textContent = captionFor(image);
+          dialog.showModal();
+          close.focus();
+        }
+
+        document.querySelectorAll("main figure img").forEach((image) => {
+          image.tabIndex = 0;
+          image.setAttribute("role", "button");
+          image.setAttribute("aria-label", `${image.alt}. Open enlarged image`);
+          image.addEventListener("click", () => open(image));
+          image.addEventListener("keydown", (event) => {
+            if (event.key === "Enter" || event.key === " ") {
+              event.preventDefault();
+              open(image);
+            }
+          });
+        });
+
+        close.addEventListener("click", () => dialog.close());
+        dialog.addEventListener("click", (event) => {
+          if (event.target === dialog) dialog.close();
+        });
+        dialog.addEventListener("close", () => {
+          full.removeAttribute("src");
+          trigger?.focus();
+        });
+      })();
+    </script>
+  </body>
+</html>
